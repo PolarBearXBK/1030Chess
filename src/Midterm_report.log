@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.5)  13 OCT 2020 22:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.5)  19 NOV 2020 22:36
 entering extended mode
 **./Midterm_report.tex
 (Midterm_report.tex
@@ -441,45 +441,51 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1{C:/Users/dell/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ] [2]
-<../figures/ratings_hist.png, id=14, 867.24pt x 578.16pt>
-File: ../figures/ratings_hist.png Graphic file (type png)
-<use ../figures/ratings_hist.png>
-Package pdftex.def Info: ../figures/ratings_hist.png  used on input line 135.
+<../figures/LiChessFigs/ratings_hist.png, id=14, 867.24pt x 578.16pt>
+File: ../figures/LiChessFigs/ratings_hist.png Graphic file (type png)
+<use ../figures/LiChessFigs/ratings_hist.png>
+Package pdftex.def Info: ../figures/LiChessFigs/ratings_hist.png  used on input
+ line 135.
 (pdftex.def)             Requested size: 500.484pt x 333.65685pt.
- [3 <../figures/ratings_hist.png>]
-<../figures/white_win.png, id=20, 867.24pt x 578.16pt>
-File: ../figures/white_win.png Graphic file (type png)
-<use ../figures/white_win.png>
-Package pdftex.def Info: ../figures/white_win.png  used on input line 147.
+ [3 <../figures/LiChessFigs/ratings_hist.png>]
+<../figures/LiChessFigs/white_win.png, id=20, 867.24pt x 578.16pt>
+File: ../figures/LiChessFigs/white_win.png Graphic file (type png)
+<use ../figures/LiChessFigs/white_win.png>
+Package pdftex.def Info: ../figures/LiChessFigs/white_win.png  used on input li
+ne 147.
 (pdftex.def)             Requested size: 500.484pt x 333.65685pt.
- [4 <../figures/white_win.png>]
-<../figures/white_pre.png, id=25, 867.24pt x 433.62pt>
-File: ../figures/white_pre.png Graphic file (type png)
-<use ../figures/white_pre.png>
-Package pdftex.def Info: ../figures/white_pre.png  used on input line 159.
+ [4 <../figures/LiChessFigs/white_win.png>]
+<../figures/LiChessFigs/white_pre.png, id=25, 867.24pt x 433.62pt>
+File: ../figures/LiChessFigs/white_pre.png Graphic file (type png)
+<use ../figures/LiChessFigs/white_pre.png>
+Package pdftex.def Info: ../figures/LiChessFigs/white_pre.png  used on input li
+ne 159.
 (pdftex.def)             Requested size: 500.484pt x 250.24265pt.
-<../figures/black_pre.png, id=26, 867.24pt x 433.62pt>
-File: ../figures/black_pre.png Graphic file (type png)
-<use ../figures/black_pre.png>
-Package pdftex.def Info: ../figures/black_pre.png  used on input line 161.
+<../figures/LiChessFigs/black_pre.png, id=26, 867.24pt x 433.62pt>
+File: ../figures/LiChessFigs/black_pre.png Graphic file (type png)
+<use ../figures/LiChessFigs/black_pre.png>
+Package pdftex.def Info: ../figures/LiChessFigs/black_pre.png  used on input li
+ne 161.
 (pdftex.def)             Requested size: 500.484pt x 250.24265pt.
- 
+
+
 AED: lastpage setting LastPage
-[5 <../figures/white_pre.png> <../figures/black_pre.png>] (Midterm_report.aux) 
-) 
+[5 <../figures/LiChessFigs/white_pre.png> <../figures/LiChessFigs/black_pre.png
+>] (Midterm_report.aux) ) 
 Here is how much of TeX's memory you used:
  4265 strings out of 492895
- 57663 string characters out of 3135835
+ 57867 string characters out of 3135835
  148856 words of memory out of 3000000
  8076 multiletter control sequences out of 15000+200000
  11290 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,43p,932b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/DSI/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/DSI/Soft
-ware/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/DSI/Software/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb><D:/DSI/Software/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr8.pfb><D:/DSI/Software/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmti10.pfb><D:/DSI/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+<D:/DSI/Software/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb><D:/DSI/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D
+:/DSI/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/DSI/Software
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/DSI/Software/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmti10.pfb><D:/DSI/Software/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmti12.pfb>
 Output written on Midterm_report.pdf (5 pages, 186171 bytes).
 PDF statistics:
  51 PDF objects out of 1000 (max. 8388607)
