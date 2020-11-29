@@ -79,8 +79,8 @@
 \raggedcolumns
 \subsection*{Introduction}
 
-My project concerns some problems that are related to the game of chess. There are two main parts to my project. The first and main goal is to come up with a model that can predict the results of a chess game, while the second is to reverse-engineer some details of the current mainstream prediction system, the ELO rating system.
-Although the results of a chess game can only take three discrete values (1-0, 0.5-0.5, 0-1), this is not a classification problem, since a single game between even-matched players is anyone’s match to take. We aim to predict the average score a player will obtain against another player; therefore, the validation and testing datasets must contain a sufficient number of points.
+My project concerns some problems that are related to the game of chess. There are two main parts to my project. The first and main goal is to come up with a model that can predict the results of a chess game, while the second is to reverse-engineer some details of the current mainstream prediction system: the ELO rating system.
+Although the results of a chess game can only take three discrete values (1-0, 0.5-0.5, 0-1), predicting it is not a classification problem, as a single game between even-matched players cannot be called for either side with certainty. We aim to predict the average score a player will obtain against another player; therefore, the validation and testing datasets must contain a sufficient number of games to ensure that many opponents play more than one game against each other in our dataset.
 
 The ELO system that most nations currently use generates a score for every individual based on his/her strength that changes and becomes more accurate with the more games the play, and generally it will be possible to predict the result of a game between two players with stable ELO ratings. However, upsets happen all the time in the chess world, and it would be fun to find whether there is a better model for this problem.
 
@@ -94,9 +94,6 @@ There are no missing values in either dataset.
 
 Using the table of initial rankings, we obtain a distribution of ~18000 players in the pool$^{[1]}$, which accounts for around one third of the total population. Even the weakest player in this pool has a rating of 2001, which roughly translates to a very strong player who can beat almost everyone who plays chess casually. The highest rated player has a rating of 2810, which would rank top ten amongst highest ratings ever achieved by humans. From these findings, we can assume that all games in this dataset are high level games.
 
-
-
-
 The second dataset is much less so, being records of games by users on LiChess, most of its players are around the level of an average player who plays chess occasionally as a hobby.
 
 White moves first in chess, and it is usually understood that white has a somewhat significant advantage in top games. We show that this is true in our main dataset.$^{[2]}$ Of all games played, the chances that white would win is almost 25\% more likely than the chances that black would win.
@@ -105,42 +102,51 @@ True to our intuition, the more frequent a player plays the game, the more likel
 
 \setlength{\parskip}{0.0cm}
 \begin{center}
-\begin{small}
+\begin{scriptsize}
+
 \includegraphics[width=\linewidth]{../figures/LiChessFigs/ratings_hist.png}
 \textit{[1] The rating distribution in our main dataset. This dataset consists of very high-level gameplay.}
-\end{small}
+
+\end{scriptsize}
 \end{center}
 
 \setlength{\parskip}{0.0cm}
 \begin{center}
-\begin{small}
+\begin{scriptsize}
+
 \includegraphics[width=\linewidth]{../figures/LiChessFigs/white_win.png}
 \textit{[2] White wins a noticeable larger percentage of games than black. Given the amount of draws in chess, this is not as significant in the population.}
-\end{small}
+
+\end{scriptsize}
 \end{center}
 
 \setlength{\parskip}{0.0cm}
 \begin{center}
-\begin{small}
+\begin{scriptsize}
+
 \includegraphics[width=\linewidth]{../figures/LiChessFigs/white_pre.png}
 \includegraphics[width=\linewidth]{../figures/LiChessFigs/black_pre.png}
 \textit{[3] The average score the white player earns per game rises with the experience of the white player, and drops with the experience of the black player.
 }
-\end{small}
+
+\end{scriptsize}
 \end{center}
 \setlength{\parskip}{0.1cm}
 
-
 The second dataset is mainly used for some simple experiments and fact-extraction. Because the first dataset contains a unique encoding from player to ID that does not exist in the second dataset, my model construction will be completed only on the first dataset.
+
+\section*{Preprocessing}
 
 It is a good idea to replace all scores with the average score the first player achieved with the second, since it’s not very reasonable to punish the model for natural discrepancies within the player’s gameplay and the factor of luck. To reiterate a point being made previously, I will aim to predict the chance that the white player will win, which is the average score the white player achieved over the black player. This will be done with data grouped on a yearly basis.
 
 \setlength{\parskip}{0.0cm}
 \begin{center}
-\begin{small}
+\begin{scriptsize}
+
 \includegraphics[width=\linewidth]{../figures/FIDE_results.png}
 \textit{A plot of rating differences vs rating mean, with color code being game results. The FIDE ratings does not provide a clear distinction between games.}
-\end{small}
+
+\end{scriptsize}
 \end{center}
 \setlength{\parskip}{0.1cm}
 
@@ -161,41 +167,112 @@ To conclude everything above, the entire ML pipeline will look like the followin
 	\item Data preprocessing, label manipulation
 	\item Compute baseline model based on the first three years of games and initial rating dataset
 	\item Using graphical algorithms to generate features and new rating points
-	\item Create rolling periods of three years
+	\item Create rolling periods of four years
 	\item Train, valid and test on each rolling period, using all three models
 	\item Find results and loss score, compare new features with baseline model
 \end{enumerate}
 
+The validation set is used mainly to tune parameters of machine aforementioned learning models.
+
+
+\begin{center}
+\begin{tabular}{ |ccc| } \hline
+	Parameters & XGBoost & Random Forest \\
+	max depth & 4, 5, 6 & 4, 5, 6 \\
+	estimators & 30, 100 & 30, 100 \\ \hline
+	Parameters & Elastic Net & Linear Model \\
+	l1 ratio & 0.3, 0.5, 0.7 & N/A \\
+	alpha & 0.1, 1, 10 & N/A \\ \hline
+\end{tabular}
+\end{center}
 
 \section*{Results}
 
-Using the FIDE ratings of players at the starting date of the entire dataset, I built a baseline model that takes those ratings and checks to see how accurate they were in terms of predicting scores, characterized by the accuracy defined in the previous section. We can see that the predictions are basically the same, however this is because I reduced the training intensity of my model to get through the pipeline faster. I will change this in the final version of my report.
+\setlength{\parskip}{0.0cm}
+\begin{center}
+\begin{scriptsize}
+
+\includegraphics[width=\linewidth]{../figures/two_ratings.png}
+\textit{[4] Players with their FIDE and new ratings side by side. We can see that our generated ratings is basically on-par with old ratings. }
+
+\end{scriptsize}
+\end{center}
+\setlength{\parskip}{0.1cm}
+
+The graph above $^{[4]}$ shows the ratings of some players given by FIDE and the ratings that the algorithm generated. We can definitely see quite a strong positive correlation. Note that the old ratings were recorded before this dataset took place, so these two ratings were generated using completely non-overlapping data, which, not surprisingly, confirms that our approach does indeed make sense.
+
+Using the FIDE ratings of players at the starting date of the entire dataset, I built a baseline model that takes those ratings and checks to see how accurate they were in terms of predicting scores, characterized by the accuracy defined in the previous section. In the tails, especially the part where wins are misclassified, the new ratings alone seem to perform better than the FIDE scores in that it has a lighter misclassification tail, as shown in the violin plots below $^{[5]}$. However, these two results are not too far apart, which leads us to think perhaps a game of chess contains more unpredictability than we originally expected.
 
 \setlength{\parskip}{0.0cm}
 \begin{center}
-\begin{small}
+\begin{scriptsize}
+
 \includegraphics[width=\linewidth]{../figures/baseline_violin.png}
 \includegraphics[width=\linewidth]{../figures/new_violin.png}
-[4] These two plots demonstrate the resolution of new and old rating points. We see that the latter is not very impressive, but hopefully that will improve as I spend more time on training better models.
-\end{small}
+\textit{[5] These two plots demonstrate the resolution of new and old rating points. We see that the former is not very impressive but the latter is only better by a bit in the tails.}
+
+\end{scriptsize}
 \end{center}
 \setlength{\parskip}{0.1cm}
 
-We will show several plots as comparison between our new features and the FIDE scores. This set of violin plots$^{[4]}$ demonstrates the resolution of rating difference vs the games that are won. This is a pretty simplistic and linear approach to see the effectiveness of a certain set of ratings.
+Because chess players will sometimes have favorite and least-favorite opponents, it is meaningful to include the past games of two players in the prediction dataset as well. We will add two new columns to the dataset: previous\_average\_score and previous\_num\_games.
 
-Next, to even out the playing field, we will train all three models on both FIDE scores and new features. The loss will be calculated using MSE, and we demonstrate that the loss of our model is lower than its FIDE counterparts.$^{[5]}$
+\end{multicols}
 
-Feature importance and interpretations will be added here in the final version.
+\setlength{\parskip}{0.0cm}
+
+\begin{multicols}{2}
+
+\includegraphics[width=\linewidth]{../figures/baseline_linear.png}
+\includegraphics[width=\linewidth]{../figures/new_linear_iter_0.png}
+\includegraphics[width=\linewidth]{../figures/new_linear_withprev_iter_0.png}
+
+\includegraphics[width=\linewidth]{../figures/baseline_randomforest.png}
+\includegraphics[width=\linewidth]{../figures/new_randomforest_iter_0.png}
+\includegraphics[width=\linewidth]{../figures/new_randomforest_withprev_iter_0.png}
+\end{multicols}
+\begin{scriptsize}
+\textit{[6] These six plots are linear and random forest models fit on the new and old ratings, also on new features but including previous game results. We can see that the results monotonically improve, in terms of MSE loss.}
+
+\end{scriptsize}
+
+\setlength{\parskip}{0.1cm}
+
+\begin{multicols}{2}
+
+We will train all model types on both FIDE ratings and new ratings. We demonstrate that the MSE loss of our model is lower than its FIDE counterparts, especially when we take previous games into consideration.$^{[6]}$
+
+It should be noted that sometimes the predictions will not be in the reasonable range of $[0, 1]$, which leads us to one of the disadvantages of our models. This can be solved by further mapping the predictions to $[0, 1]$ with a sigmoid function.
+
+\subsection*{Feature Importance}
+
+We use permutation evaluation to check the importance of all our features. Surprisingly, although the previous games between two players give a small boost in MSE loss, it does not show up as significant at all in feature importance analysis $^{[7]}$.
 
 \setlength{\parskip}{0.0cm}
 \begin{center}
-\begin{small}
-\includegraphics[width=\linewidth]{../figures/baseline_linear.png}
-\includegraphics[width=\linewidth]{../figures/new_linear_iter_0.png}
-[5] These two plots are linear models fit on the new and old features. We can see that even with a minimal amount of training, the results are already comparable.
-\end{small}
+\begin{scriptsize}
+
+\includegraphics[width=\linewidth]{../figures/feature_importance.png}
+\textit{[7] Feature importance obtained using permutation tests.}
+
+\end{scriptsize}
 \end{center}
 \setlength{\parskip}{0.1cm}
+
+This phenomenon can be observed with more clarity when we plot all game results versus the previous results $^{[8]}$:
+
+\setlength{\parskip}{0.0cm}
+\begin{center}
+\begin{scriptsize}
+
+\includegraphics[width=\linewidth]{../figures/prev_and_cur_results.png}
+\textit{[8] Feature importance obtained using permutation tests.}
+
+\end{scriptsize}
+\end{center}
+\setlength{\parskip}{0.1cm}
+
+In most cases, there is no significant correlation between these two metrics simply because there were not enough games in the past to form a educated estimate. Therefore, the improvements that previous games provided is probably mostly focused on a couple of points, and its impact as a whole on all predictions is likely to be marginal.
 
 \section*{Outlook}
 

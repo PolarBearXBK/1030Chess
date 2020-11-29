@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.5)  20 NOV 2020 20:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.5)  29 NOV 2020 13:11
 entering extended mode
 **./Final_report.tex
 (Final_report.tex
@@ -441,97 +441,141 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1{C:/Users/dell/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-<../figures/LiChessFigs/ratings_hist.png, id=10, 867.24pt x 578.16pt>
+<../figures/LiChessFigs/ratings_hist.png, id=9, 867.24pt x 578.16pt>
 File: ../figures/LiChessFigs/ratings_hist.png Graphic file (type png)
 <use ../figures/LiChessFigs/ratings_hist.png>
 Package pdftex.def Info: ../figures/LiChessFigs/ratings_hist.png  used on input
- line 109.
+ line 107.
 (pdftex.def)             Requested size: 245.24199pt x 163.48929pt.
-<../figures/LiChessFigs/white_win.png, id=12, 867.24pt x 578.16pt>
+<../figures/LiChessFigs/white_win.png, id=11, 867.24pt x 578.16pt>
 File: ../figures/LiChessFigs/white_win.png Graphic file (type png)
 <use ../figures/LiChessFigs/white_win.png>
 Package pdftex.def Info: ../figures/LiChessFigs/white_win.png  used on input li
 ne 117.
 (pdftex.def)             Requested size: 245.24199pt x 163.48929pt.
-<../figures/LiChessFigs/white_pre.png, id=13, 867.24pt x 433.62pt>
+<../figures/LiChessFigs/white_pre.png, id=12, 867.24pt x 433.62pt>
 File: ../figures/LiChessFigs/white_pre.png Graphic file (type png)
 <use ../figures/LiChessFigs/white_pre.png>
 Package pdftex.def Info: ../figures/LiChessFigs/white_pre.png  used on input li
-ne 125.
+ne 127.
 (pdftex.def)             Requested size: 245.24199pt x 122.61697pt.
-<../figures/LiChessFigs/black_pre.png, id=14, 867.24pt x 433.62pt>
+<../figures/LiChessFigs/black_pre.png, id=13, 867.24pt x 433.62pt>
 File: ../figures/LiChessFigs/black_pre.png Graphic file (type png)
 <use ../figures/LiChessFigs/black_pre.png>
 Package pdftex.def Info: ../figures/LiChessFigs/black_pre.png  used on input li
-ne 126.
+ne 128.
 (pdftex.def)             Requested size: 245.24199pt x 122.61697pt.
-<../figures/FIDE_results.png, id=15, 867.24pt x 578.16pt>
-File: ../figures/FIDE_results.png Graphic file (type png)
-<use ../figures/FIDE_results.png>
-Package pdftex.def Info: ../figures/FIDE_results.png  used on input line 141.
-(pdftex.def)             Requested size: 245.24199pt x 163.48929pt.
  [2 <../figures/LiChessFigs/ratings_hist.png> <../figures/LiChessFigs/white_win
 .png> <../figures/LiChessFigs/white_pre.png> <../figures/LiChessFigs/black_pre.
-png>] [3 <../figures/FIDE_results.png>]
-<../figures/baseline_violin.png, id=28, 505.89pt x 361.35pt>
+png>]
+<../figures/FIDE_results.png, id=23, 867.24pt x 578.16pt>
+File: ../figures/FIDE_results.png Graphic file (type png)
+<use ../figures/FIDE_results.png>
+Package pdftex.def Info: ../figures/FIDE_results.png  used on input line 146.
+(pdftex.def)             Requested size: 245.24199pt x 163.48929pt.
+ [3 <../figures/FIDE_results.png>]
+<../figures/two_ratings.png, id=28, 433.62pt x 289.08pt>
+File: ../figures/two_ratings.png Graphic file (type png)
+<use ../figures/two_ratings.png>
+Package pdftex.def Info: ../figures/two_ratings.png  used on input line 195.
+(pdftex.def)             Requested size: 245.24199pt x 163.49811pt.
+<../figures/baseline_violin.png, id=29, 505.89pt x 361.35pt>
 File: ../figures/baseline_violin.png Graphic file (type png)
 <use ../figures/baseline_violin.png>
-Package pdftex.def Info: ../figures/baseline_violin.png  used on input line 177
+Package pdftex.def Info: ../figures/baseline_violin.png  used on input line 210
 .
 (pdftex.def)             Requested size: 245.24199pt x 175.17734pt.
-<../figures/new_violin.png, id=29, 505.89pt x 361.35pt>
+<../figures/new_violin.png, id=30, 505.89pt x 361.35pt>
 File: ../figures/new_violin.png Graphic file (type png)
 <use ../figures/new_violin.png>
-Package pdftex.def Info: ../figures/new_violin.png  used on input line 178.
+Package pdftex.def Info: ../figures/new_violin.png  used on input line 211.
 (pdftex.def)             Requested size: 245.24199pt x 175.17734pt.
-<../figures/baseline_linear.png, id=30, 505.89pt x 361.35pt>
+ [4 <../figures/two_ratings.png> <../figures/baseline_violin.png> <../figures/n
+ew_violin.png>]
+<../figures/baseline_linear.png, id=37, 505.89pt x 361.35pt>
 File: ../figures/baseline_linear.png Graphic file (type png)
 <use ../figures/baseline_linear.png>
-Package pdftex.def Info: ../figures/baseline_linear.png  used on input line 193
+Package pdftex.def Info: ../figures/baseline_linear.png  used on input line 226
 .
 (pdftex.def)             Requested size: 245.24199pt x 175.17734pt.
-<../figures/new_linear_iter_0.png, id=31, 505.89pt x 361.35pt>
+<../figures/new_linear_iter_0.png, id=38, 505.89pt x 361.35pt>
 File: ../figures/new_linear_iter_0.png Graphic file (type png)
 <use ../figures/new_linear_iter_0.png>
-Package pdftex.def Info: ../figures/new_linear_iter_0.png  used on input line 1
-94.
+Package pdftex.def Info: ../figures/new_linear_iter_0.png  used on input line 2
+27.
 (pdftex.def)             Requested size: 245.24199pt x 175.17734pt.
- [4 <../figures/baseline_violin.png> <../figures/new_violin.png> <../figures/ba
-seline_linear.png> <../figures/new_linear_iter_0.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 205.
+<../figures/new_linear_withprev_iter_0.png, id=39, 505.89pt x 361.35pt>
+File: ../figures/new_linear_withprev_iter_0.png Graphic file (type png)
+<use ../figures/new_linear_withprev_iter_0.png>
+Package pdftex.def Info: ../figures/new_linear_withprev_iter_0.png  used on inp
+ut line 228.
+(pdftex.def)             Requested size: 245.24199pt x 175.17734pt.
+<../figures/baseline_randomforest.png, id=40, 505.89pt x 361.35pt>
+File: ../figures/baseline_randomforest.png Graphic file (type png)
+<use ../figures/baseline_randomforest.png>
+Package pdftex.def Info: ../figures/baseline_randomforest.png  used on input li
+ne 230.
+(pdftex.def)             Requested size: 245.24199pt x 175.17734pt.
+<../figures/new_randomforest_iter_0.png, id=41, 505.89pt x 361.35pt>
+File: ../figures/new_randomforest_iter_0.png Graphic file (type png)
+<use ../figures/new_randomforest_iter_0.png>
+Package pdftex.def Info: ../figures/new_randomforest_iter_0.png  used on input 
+line 231.
+(pdftex.def)             Requested size: 245.24199pt x 175.17734pt.
+<../figures/new_randomforest_withprev_iter_0.png, id=42, 505.89pt x 361.35pt>
+File: ../figures/new_randomforest_withprev_iter_0.png Graphic file (type png)
+<use ../figures/new_randomforest_withprev_iter_0.png>
+Package pdftex.def Info: ../figures/new_randomforest_withprev_iter_0.png  used 
+on input line 232.
+(pdftex.def)             Requested size: 245.24199pt x 175.17734pt.
+ [5 <../figures/baseline_linear.png> <../figures/new_linear_iter_0.png> <../fig
+ures/new_linear_withprev_iter_0.png> <../figures/baseline_randomforest.png> <..
+/figures/new_randomforest_iter_0.png> <../figures/new_randomforest_withprev_ite
+r_0.png>]
+<../figures/feature_importance.png, id=53, 505.89pt x 361.35pt>
+File: ../figures/feature_importance.png Graphic file (type png)
+<use ../figures/feature_importance.png>
+Package pdftex.def Info: ../figures/feature_importance.png  used on input line 
+255.
+(pdftex.def)             Requested size: 245.24199pt x 175.17734pt.
+<../figures/prev_and_cur_results.png, id=54, 433.62pt x 289.08pt>
+File: ../figures/prev_and_cur_results.png Graphic file (type png)
+<use ../figures/prev_and_cur_results.png>
+Package pdftex.def Info: ../figures/prev_and_cur_results.png  used on input lin
+e 268.
+(pdftex.def)             Requested size: 245.24199pt x 163.49811pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 282.
 
-
-(D:\DSI\Software\MiKTeX\tex/latex/base\omscmr.fd
+ (D:\DSI\Software\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 205.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 282.
 
+[6 <../figures/feature_importance.png> <../figures/prev_and_cur_results.png>]
 
 AED: lastpage setting LastPage
-[5] (Final_report.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[7] (Final_report.aux) ) 
 Here is how much of TeX's memory you used:
- 4313 strings out of 492895
- 59001 string characters out of 3135835
- 142856 words of memory out of 3000000
- 8114 multiletter control sequences out of 15000+200000
- 11598 words of font info for 44 fonts, out of 3000000 for 9000
+ 4351 strings out of 492895
+ 60369 string characters out of 3135835
+ 149856 words of memory out of 3000000
+ 8144 multiletter control sequences out of 15000+200000
+ 11950 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,43p,1258b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/DSI/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/DSI/Sof
-tware/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/DSI/Software/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/DSI/Software/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr12.pfb><D:/DSI/Software/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmr8.pfb><D:/DSI/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-D:/DSI/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/DSI/Softwa
-re/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Final_report.pdf (5 pages, 340668 bytes).
+ 41i,10n,43p,1258b,357s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/DSI/Software/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb><D:/DSI/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D
+:/DSI/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/DSI/Softwar
+e/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/DSI/Software/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr12.pfb><D:/DSI/Software/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><D:/DSI/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><D:/DSI/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/D
+SI/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/DSI/Software/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on Final_report.pdf (7 pages, 494970 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 99 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
